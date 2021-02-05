@@ -28,7 +28,7 @@ jobs:
           npm install
       - name: '运行 【步步宝】'
         run: |
-          node Task/txnews.js
+          node Task/BBB.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
