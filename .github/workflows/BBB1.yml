@@ -1,9 +1,9 @@
-name: 步步宝
+name: 步步宝1
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 8-23/7 * * *"
+        - cron: "1 0-14/2 * * *"
     watch:
         types: [started]
 
@@ -24,4 +24,4 @@ jobs:
               run: |
                   node Task/BBB.js
               env:
-                 BBB_CK: ${{ secrets.BBB_CK }}
+                 bbb_ck: ${{ secrets.bbb_ck }}
