@@ -24,12 +24,14 @@ jobs:
               run: |
                   node huoshan.js
               env:
+                    playurl: ${{ secrets.playurl }}
+                    playheader: ${{ secrets.playheader }}
+                    playbody: ${{ secrets.playbody }}
                     hsurl : ${{ secrets.hsurl }}
                     hsheader: ${{ secrets.hsheader }}
                     hsbody : ${{ secrets.hsbody}}
-                    playurl: ${{ secrets.playurl }}
-                    playheader: ${{ secrets.playheader }}
-                    playbody: ${{ secrets.playbody }}    
+
+
                     PUSH_KEY: ${{ secrets.PUSH_KEY }}
                     BARK_PUSH: ${{ secrets.BARK_PUSH }}
                     TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
