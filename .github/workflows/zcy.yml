@@ -19,10 +19,10 @@ jobs:
                   node-version: 10.x
             - name: npm install
               run: |
-                  npm install
-              - name: '运行 【走财运】'
-              run: |
-              node zcy.js
+                 npm install
+                                                        - name: '运行 【走财运】'
+                                run: | 
+                        node zcy.js
               env:
                 ZCYHEADER: ${{ secrets.ZCYHEADER }}
                 ZCYBODY: ${{ secrets.ZCYBODY }}
