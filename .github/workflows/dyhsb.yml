@@ -28,7 +28,7 @@ jobs:
           npm install
       - name: '运行 【抖音火山版】'
         run: |
-          node Task/dyhsb.js
+          node dyhsb.js
         env:
 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
