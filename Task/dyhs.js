@@ -28,8 +28,8 @@ http-request https://api3-normal-c-\w+.huoshan.com/hotsoon/item/reaction/_play/?
 const zhiyi = '抖音火山版'
 const $ = Env(zhiyi)
 const notify = $.isNode() ?require('./sendNotify') : '';
-//let status;
-//status = (status = ($.getval("hsstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
+let status;
+status = (status = ($.getval("hsstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 const hsurlArr = []
 const hsheaderArr = []
 const hsbodyArr = []
@@ -137,11 +137,11 @@ if (process.env.PLAYURL && process.env.PLAYURL.indexOf('#') > -1) {
     playbodyArr.push($.getdata('playbody'))
     let hscount = ($.getval('hscount') || '1');
   for (let i = 2; i <= hscount; i++) {
-	hsurlArr.push($.getdata(`hsurl${i}`))
+    hsurlArr.push($.getdata(`hsurl${i}`))
     hsheaderArr.push($.getdata(`hsheader${i}`))
     hsbodyArr.push($.getdata(`hsbody${i}`))
     playurlArr.push($.getdata(`playurl${i}`))
-playheaderArr.push($.getdata(`playheader${i}`))
+    playheaderArr.push($.getdata(`playheader${i}`))
     playbodyArr.push($.getdata(`playbody${i}`))
   }
 }
@@ -163,13 +163,13 @@ if (!hsheaderArr[0] && !hsbodyArr[0] && !hsurlArr[0]) {
       playbody = playbodyArr[i];
       $.index = i + 1;
       console.log(`\n开始【抖音火山版${$.index}】`)
-      //await ck()
+      await ck()
       await app_alert_check()
       await device_register()
       await userinfo()
       await gettoken()
       await sign_in()
-      //await ad()
+      await ad()
       await hotsoonfeed()
       await control()
       await lottery_main()
