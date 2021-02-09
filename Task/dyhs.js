@@ -31,7 +31,7 @@ const notify = $.isNode() ?require('./sendNotify') : '';
 //let status;
 //status = (status = ($.getval("hsstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 const hsheaderArr = [],hsbodyArr = [],hsurlArr = []
-playurlArr = [],playheaderArr = [],playbodyArr = []
+const playurlArr = [],playheaderArr = [],playbodyArr = []
 
 let playurl = $.getdata('playurl')
 let playheader = $.getdata('playheader')
