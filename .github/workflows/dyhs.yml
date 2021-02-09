@@ -35,7 +35,7 @@ jobs:
           HSBODY: ${{ secrets.hsbody }}
           PLAYURL: ${{ secrets.playurl }}
           PLAYHEADER: ${{ secrets.playheader }}
-          PLAYBOBY: ${{ secrets.playbody }}
+          PLAYBODY: ${{ secrets.playbody }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
