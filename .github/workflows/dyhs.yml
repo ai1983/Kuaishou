@@ -30,12 +30,12 @@ jobs:
         run: |
           node Task/dyhs.js
         env:
-          hsurl: ${{ secrets.hsurl }}
-          hsheader: ${{ secrets.hsheader }}
-          hsbody: ${{ secrets.hsbody }}
-          playurl: ${{ secrets.playurl }}
-          playheader: ${{ secrets.playheader }}
-          playbody: ${{ secrets.playbody }}
+          HSURL: ${{ secrets.hsurl }}
+          HSHEADER: ${{ secrets.hsheader }}
+          HSBODY: ${{ secrets.hsbody }}
+          PLAYURL: ${{ secrets.playurl }}
+          PLAYHEADER: ${{ secrets.playheader }}
+          PLAYBOBY: ${{ secrets.playbody }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
