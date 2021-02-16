@@ -1,4 +1,4 @@
- name: 芝麻视频
+ name: 走路赚
 
  on:
    workflow_dispatch:
@@ -35,7 +35,7 @@
          run: |
            cd ~/Script
            npm install
-       - name: '运行 【芝麻视频】'
+       - name: '运行 【走路赚】'
          if: env.XIAOMUYUHEADER
          run: |
            cd ~/Script
