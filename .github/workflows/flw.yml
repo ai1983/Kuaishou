@@ -17,13 +17,15 @@ jobs:
         FL_flwURL: ${{ secrets.FL_flwURL }}
         FL_flwHEADER: ${{ secrets.FL_flwHEADER }}		
         FL_flwspBODY: ${{ secrets.FL_flwspBODY }}	
-        FL_flwqwBODY: ${{ secrets.FL_flwqwBODY }}        
+        FL_flwqwBODY: ${{ secrets.FL_flwqwBODY }}   
+        FL_flwydBODY: ${{ secrets.FL_flwydBODY }}   
+
         FL_CASH: ${{ secrets.FL_CASH }}//天天领现金提现
         FL_DHCASH: ${{ secrets.FL_DHCASH }}//签到活动兑换
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye12/JavaScript.git ~/JavaScript
+          git clone https://github.com/ziye66666/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
