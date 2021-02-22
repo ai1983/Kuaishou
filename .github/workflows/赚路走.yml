@@ -17,7 +17,7 @@
           XIAOMUYUHEADER: ${{ secrets. XIAOMUYUHEADER }}
           IBOXPAYBODY: ${{ secrets. IBOXPAYBODY }}
           TURNTABLRURL: ${{ secrets. TURNTABLRURL }}
-          TURNTABLRHEADER: ${{ secrets. TURNTABLRHEADER }}
+          : ${{ secrets. TURNTABLRHEADER }}
           DOUBLEHEADER: ${{ secrets. DOUBLEHEADER }}
           CARDBODY: ${{ secrets. CARDBODY }}
           MEMBERBODY: ${{ secrets. MEMBERBODY }}
@@ -36,7 +36,7 @@
            cd ~/Script
            npm install
        - name: '运行 【走路赚】'
-         if: env.XIAOMUYUHEADER
+         if: env.TURNTABLRHEADER
          run: |
            cd ~/Script
            node zoulusign.js
