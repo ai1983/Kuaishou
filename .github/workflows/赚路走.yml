@@ -17,7 +17,7 @@
           XIAOMUYUHEADER: ${{ secrets. XIAOMUYUHEADER }}
           IBOXPAYBODY: ${{ secrets. IBOXPAYBODY }}
           TURNTABLRURL: ${{ secrets. TURNTABLRURL }}
-          : ${{ secrets. TURNTABLRHEADER }}
+          TURNTABLRHEADER : ${{ secrets. TURNTABLRHEADER }}
           DOUBLEHEADER: ${{ secrets. DOUBLEHEADER }}
           CARDBODY: ${{ secrets. CARDBODY }}
           MEMBERBODY: ${{ secrets. MEMBERBODY }}
