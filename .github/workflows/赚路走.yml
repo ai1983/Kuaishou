@@ -31,12 +31,10 @@
          with:
            node-version: 12.x
        - name: npm install
-         if: env.XIAOMUYUHEADER
          run: |
            cd ~/Script
            npm install
        - name: '运行 【走路赚】'
-         if: env.TURNTABLRHEADER
          run: |
            cd ~/Script
            node zoulusign.js
