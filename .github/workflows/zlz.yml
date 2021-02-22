@@ -34,7 +34,7 @@ jobs:
       - name: '运行 【zlz】'
         if: env.XIAOMUYUHEADER
         run: |
-          node scripts/zlz.js
+          node Task/zlz.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
