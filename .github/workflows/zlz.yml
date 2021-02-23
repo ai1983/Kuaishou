@@ -3,7 +3,7 @@ name: zlz
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/10 0-14 * * *'
+     - cron: '0 0-14/1 * * *'
   watch:
     types: started
 jobs:
