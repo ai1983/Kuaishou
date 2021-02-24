@@ -15,6 +15,7 @@
      if: github.event.repository.owner.id == github.event.sender.id
      env:
          ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
+         ZM_zhimatxbody: ${{ secrets.ZM_zhimatxbody }}
      steps:
        - name: Checkout
          run: |
