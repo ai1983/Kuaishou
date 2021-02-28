@@ -1,0 +1,37 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 返利网
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '0 2,12 * * *'
+jobs:
+  build:
+      runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+           - name: npm install
+             run: |
+                 npm install
+           - name: '运行 【返利网】'
+             run: |
+                 node Task/flw.js
+        env:
+             FL_flwURL: ${{ secrets.FL_flwURL }}
+             FL_flwHEADER: ${{ secrets.FL_flwHEADER }}		
+             FL_flwspBODY: ${{ secrets.FL_flwspBODY }}	
+             FL_flwqwBODY: ${{ secrets.FL_flwqwBODY }}   
+             FL_flwydBODY: ${{ secrets.FL_flwydBODY }}   
+             FL_CASH: ${{ secrets.FL_CASH }}//天天领现金提现
+             FL_DHCASH: ${{ secrets.FL_DHCASH }}//签到活动兑换
+             TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+             TG_USER_ID: ${{ secrets.TG_USER_ID }}
+
+
+    
