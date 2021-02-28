@@ -19,7 +19,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-           - name: '运行 【笑谱】'
+            - name: '运行 【笑谱】'
               run: |
                   node Task/iboxpay.js
         env:
