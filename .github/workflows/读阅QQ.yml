@@ -25,15 +25,12 @@ jobs:
                   npm install
             - name: "运行 【QQ阅读】"
               run: |
-                  node Ponysitters_Club_Season.js
+                  node Task/QQread.js
         env:
              QQ_QQreadURL: ${{ secrets. QQ_QQreadURL }}
-             SYNCURL: /Task/QQread.js
-             JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
              SCKEY: ${{ secrets.SCKEY }}
              BARK_PUSH: ${{ secrets.BARK_PUSH }}
              PUSH_KEY: ${{ secrets.PUSH_KEY }}
              TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
              TG_USER_ID: ${{ secrets.TG_USER_ID }}
-             EFORK: ${{ secrets.EFORK }}
-             GITHUB: ${{ secrets.GITHUB }}
+
