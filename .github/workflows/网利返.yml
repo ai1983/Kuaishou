@@ -10,19 +10,19 @@ on:
 jobs:
   build:
       runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js 12.x
-              uses: actions/setup-node@v1
-              with:
+      steps:
+             - uses: actions/checkout@v1
+             - name: Use Node.js 12.x
+               uses: actions/setup-node@v1
+               with:
                   node-version: 12.x
-           - name: npm install
-             run: |
+             - name: npm install
+               run: |
                  npm install
-           - name: '运行 【返利网】'
-             run: |
+             - name: '运行 【返利网】'
+               run: |
                  node Task/flw.js
-        env:
+      env:
              FL_flwURL: ${{ secrets.FL_flwURL }}
              FL_flwHEADER: ${{ secrets.FL_flwHEADER }}		
              FL_flwspBODY: ${{ secrets.FL_flwspBODY }}	
