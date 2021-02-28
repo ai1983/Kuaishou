@@ -26,12 +26,12 @@ jobs:
       - name: npm install
         if: env. QQ_QQreadURL
         run: |
-          cd ~/JavaScript
+          cd ~/ziji1
           npm install
       - name: '运行 【QQ阅读】'
         if: env. QQ_QQreadURL
         run: |
-          cd ~/JavaScript
+          cd ~/ziji1
           node Task/QQread.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
