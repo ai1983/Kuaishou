@@ -22,20 +22,16 @@ jobs:
       TXNEWS_COOKIE: ${{ secrets.TXNEWS_COOKIE }}
       TXNEWS_VIDEO: ${{ secrets.TXNEWS_VIDEO }}
     steps:
-      - name: Checkout
-        run: 
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
-          cd ~/Scripts
           npm install
       - name: '运行 【腾讯新闻】'
         if: env.TXNEWS_COOKIE
         run: |
-          cd ~/Scripts
           node Task/txnews.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
