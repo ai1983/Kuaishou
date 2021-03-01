@@ -27,7 +27,7 @@ jobs:
         run: |
           cd ~/ziji
           npm install
-      - name: '运行 【闻新讯腾】'
+      - name: '运行 【腾讯新闻】'
         if: env.TXNEWS_SIGN
         run: |
           cd ~/ziji
