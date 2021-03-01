@@ -4,7 +4,7 @@
 #   branches: 
 #   - master 
 
-name: 自选股
+name: 股选自信威迅藤
 
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【自选股】'
+      - name: '运行 【股选自信威迅藤】'
         run: |
           node Task/txstock.js
         env:
