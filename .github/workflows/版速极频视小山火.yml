@@ -1,4 +1,4 @@
- name: 火山小视频极速版
+ name: 版速极频视小山火
 
  on:
    workflow_dispatch:
