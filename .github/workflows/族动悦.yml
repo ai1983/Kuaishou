@@ -2,7 +2,7 @@ name: 族动悦
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/3 * * * *'
+     - cron: '0,30 0-13 * * *'
   watch:
     types: started
 jobs:
@@ -26,7 +26,7 @@ jobs:
         run: |
           cd ~/ziji
           npm install
-      - name: '运行 【族动悦】'
+      - name: '运行 【悦动族】'
         if: env.YDZ_yuedongzuTOKEN
         run: |
           cd ~/ziji
