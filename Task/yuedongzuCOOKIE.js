@@ -1,1 +1,12 @@
-<html><body>You are being <a href="https://raw.githubusercontent.com/ziye11/JavaScript/main/Task/yuedongzuCOOKIE.js">redirected</a>.</body></html>
+//独立COOKIE文件     ck在``里面填写，多账号换行
+
+let yuedongzutokenVal = ``
+
+
+
+let yuedongzucookie = {
+    yuedongzutokenVal: yuedongzutokenVal,
+
+}
+
+module.exports = yuedongzucookie
