@@ -1,4 +1,4 @@
-name: zlz
+name: 赚路走
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【zlz】'
+      - name: '运行 【赚路走】'
         if: env.XIAOMUYUHEADER
         run: |
           node Task/zlz.js
