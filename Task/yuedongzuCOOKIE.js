@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.githubusercontent.com/ziye11/JavaScript/main/Task/yuedongzuCOOKIE.js">redirected</a>.</body></html>
