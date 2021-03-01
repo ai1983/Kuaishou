@@ -23,7 +23,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【染驴】"
+            - name: "运行 【燃旅】"
               run: |
                   node RaNLV.js
               env:
