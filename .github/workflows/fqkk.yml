@@ -3,7 +3,7 @@ name: 番茄看看
 on:
   workflow_dispatch:
   schedule:
-     - cron: '15 12,14,16,20 * * *'
+     - cron: '0 0-12/2 * * *'
   watch:
     types: started
 jobs:
