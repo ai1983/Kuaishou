@@ -19,7 +19,7 @@
                   npm install
             - name: '运行 【番茄小说】'
               run: |
-                  node qtt.js
+                  node fqxs.js
         env:
              FQXSURL: ${{ secrets.FQXSURL}}
              FQXS: ${{ secrets.FQXS}}
