@@ -1,44 +1,41 @@
 /*
-tgchannel：https://t.me/ZhiYi_Script
-github：https://github.com/ZhiYi-N/script
-boxjs：https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
-转载留个名字，谢谢
-邀请码：AU6GW
-谢谢
-作者：执意ZhiYi-N
-#看一个视频弹出金币获取ck
+tgchannel：https://t.me/Ariszy_Script
+github：https://github.com/Ariszy/script
+boxjs：https://raw.githubusercontent.com/Ariszy/Private-Script/master/Ariszy.boxjs.json
+作者：执意Ariszy
+#看一个视频弹出金币获取ck，本脚本只供学习使用，请勿滥用，下载24小时内请删除
 
 [mitm]
 hostname = *.huoshan.com
 #圈x
 [rewrite local]
-/hotsoon/flame/task_done/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
+/hotsoon/flame/task_done/? url script-request-body https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js
 
-/hotsoon/item/reaction/_play/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
+/hotsoon/item/reaction/_play/? url script-request-body https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js
 
 #loon
-http-request /hotsoon/flame/task_done/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版video
+http-request /hotsoon/flame/task_done/? script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版video
 
-http-request /hotsoon/item/reaction/_play/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版play
+http-request /hotsoon/item/reaction/_play/? script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版play
 
 #surge
-抖音火山版video = type=http-request,pattern=/hotsoon/flame/task_done/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
+抖音火山版video = type=http-request,pattern=/hotsoon/flame/task_done/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
 
-抖音火山版play = type=http-request,pattern=/hotsoon/item/reaction/_play/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
+抖音火山版play = type=http-request,pattern=/hotsoon/item/reaction/_play/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
 */
 
-const zhiyi = '抖音火山版'
-const $ = Env(zhiyi)
+const Ariszy = '抖音火山版'
+const $ = Env(Ariszy)
 const notify = $.isNode() ?require('./sendNotify') : '';
 let status;
 status = (status = ($.getval("hsstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 const hsheaderArr = [],hsbodyArr = [],hsurlArr = [],playurlArr = [],playheaderArr = [],playbodyArr = []
-let playurl = $.getdata('playurl')
-let playheader = $.getdata('playheader')
-let playbody = $.getdata('playbody')
-let hsurl = $.getdata('hsurl')
-let hsheader = $.getdata('hsheader')
-let hsbody = $.getdata('hsbody')
+let playurl = $.getdata('playurl'{https://api3-normal-c-lq.huoshan.com/hotsoon/item/reaction/_play/?js_sdk_version=1.93.0.1&client_request_id=0c23fce90799de69f24756df9eaf0b27&minor_control_status=0&ac=WIFI&tab_mode=3&})
+let playheader = $.getdata('playheader'{"Tt-Tnc-Etag":"3d1cb73d-4cf96dd4-b5bf728d-8537c160","X-Gorgon":"8404a0e610000eea0473888ac1b8f5a45a4433e8c7af9a58ae66","User-Agent":"?§?????￥?±?±?￥?°???¨?§????￠?? 10.8.5 rv:10080507 (iPhone; iOS 13.7; zh_CN) Cronet","X-SS-STUB":"E432EE5FE491C074B378785621AAD8AA","Host":"api3-normal-c-lq.huoshan.com","Cookie":"d_ticket=0ce2da0bf17952d93a634c699610a37439801; n_mh=0H6rv9xMFQ2weafwxI7FVWe6o41gl_4pVxxHo-37DCg; passport_csrf_token=ae211bb9b864e3710be99b4e9c0b7f83; passport_csrf_token_default=ae211bb9b864e3710be99b4e9c0b7f83; sessionid=b1c1f1e289cdb6b0addc4ecfe1b05898; sessionid_ss=b1c1f1e289cdb6b0addc4ecfe1b05898; sid_guard=b1c1f1e289cdb6b0addc4ecfe1b05898%7C1618494439%7C5184000%7CMon%2C+14-Jun-2021+13%3A47%3A19+GMT; sid_tt=b1c1f1e289cdb6b0addc4ecfe1b05898; uid_tt=14f0450ee19f5df0a64347623155e3a9; uid_tt_ss=14f0450ee19f5df0a64347623155e3a9; install_id=3782738727152264; ttreq=1$ac2a701d366b9a541e7bb8dd37f37446d1911c91; odin_tt=2c23a69e0635259c6faf4fe5d0839e1b8f37b92aad6b805f022310f2295cce3c775707add160eee0aa132f5f446e471ca3b0e89cea2c1337fe6d55e212c6d3a6","x-Tt-Token":"00b1c1f1e289cdb6b0addc4ecfe1b05898003d5a8914c1cbc022166a2b875e35239a6e118984a529a1510013089c51d39077082e592488dfa136ae5261c28ecd19c03427e168326fc43967c849b5197ae1b9cbcc992ece6deb030892280d9cac9763f-1.0.1","x-tt-trace-id":"00-e95633260d32fa6106c2cc81cd560458-e95633260d32fa61-01","X-SS-DP":"1112","passport-sdk-version":"5.12.1","X-Khronos":"1618822443","Tt-Config-Version":"3d1cb73d-4cf96dd4-b5bf728d-8537c160","Content-Length":"155","Connection":"keep-alive","X-Tyhon":"hES6WJ2MokScooFypZGYQ6mumWv0gJkQgYiNmgs=","sdk-version":"2","Tt-Tnc-Canary":"0","x-common-params-v2":"settings_version=24&version_code=10.8.5&app_name=live_stream&vid=A2A2785C-80BE-4931-93E6-5B0E350A77DE&device_id=896815216733384&channel=App%20Store&new_nav=0&multi_login=1&aid=1112&hs_location_permission=1&screen_width=750&openudid=0f2f6cf0076e624e95843629cf355537ae12f346&live_sdk_version=10.8.5&os_api=18&update_version_code=10080507&mccmnc=46002&os_version=13.7&ws_status=CONNECTED&jssdk_version=1.93.0.1&client_version_code=100805&device_platform=iphone&iid=3782738727152264&device_type=iPhone10,1&idfa=80786FFE-CAEE-4EB6-999B-E3CA45694DA9&is_vcd=1","Content-Type":"application/x-www-form-urlencoded","Accept-Encoding":"gzip, deflate, br"})
+let playbody = $.getdata('playbody'{action_backtrace=recommend&channel_id=10020&is_city_near_by=0&is_dy_domain=0&is_follower=0&is_following=0&item_id=6952771421718301966&source=recommend_draw})
+let hsurl = $.getdata('hsurl'{settings_version=24&version_code=10.8.5&js_sdk_version=1.93.0.1&app_name=live_stream&vid=A2A2785C-80BE-4931-93E6-5B0E350A77DE&device_id=896815216733384&new_nav=0&channel=App%20Store&multi_login=1&aid=1112&hs_location_permission=1&screen_width=750&client_request_id=9b82a4a0a9fc6ebf9cceecb238d730ad&openudid=0f2f6cf0076e624e95843629cf355537ae12f346&live_sdk_version=10.8.5&minor_control_status=0&os_api=18&update_version_code=10080507&ac=WIFI&mccmnc=46002&os_version=13.7&ws_status=CONNECTED&jssdk_version=1.93.0.1&client_version_code=100805&device_platform=iphone&tab_mode=3&iid=3782738727152264&device_type=iPhone10,1&is_vcd=1&idfa=80786FFE-CAEE-4EB6-999B-E3CA45694DA9})
+let hsheader = $.getdata('hsheader'{"Content-Type":"application/x-www-form-urlencoded","x-Tt-Token":"00b1c1f1e289cdb6b0addc4ecfe1b05898003d5a8914c1cbc022166a2b875e35239a6e118984a529a1510013089c51d39077082e592488dfa136ae5261c28ecd19c03427e168326fc43967c849b5197ae1b9cbcc992ece6deb030892280d9cac9763f-1.0.1","x-tt-trace-id":"00-e955ea230d32fa6106c2cc87ab000458-e955ea230d32fa61-01","Tt-Tnc-Etag":"3d1cb73d-4cf96dd4-b5bf728d-8537c160","Tt-Tnc-Canary":"0","sdk-version":"2","Tt-Config-Version":"3d1cb73d-4cf96dd4-b5bf728d-8537c160","X-Tyhon":"XzkNwA2OFdwMoDbqNZMv2zmsLvNkgi6IEYo66kM=","X-SS-DP":"1112","Host":"api3-normal-c-lq.huoshan.com","Accept-Encoding":"gzip, deflate, br","X-Gorgon":"840480931000ff1373cdeb8b88b533bb622e5f55440d1b236d01","Content-Length":"116","passport-sdk-version":"5.12.1","User-Agent":"?§?????￥?±?±?￥?°???¨?§????￠?? 10.8.5 rv:10080507 (iPhone; iOS 13.7; zh_CN) Cronet","X-SS-STUB":"38F01BE122A42006A4037DB4F8DFA76A","Connection":"keep-alive","X-Khronos":"1618822424","Cookie":"d_ticket=0ce2da0bf17952d93a634c699610a37439801; n_mh=0H6rv9xMFQ2weafwxI7FVWe6o41gl_4pVxxHo-37DCg; passport_csrf_token=ae211bb9b864e3710be99b4e9c0b7f83; passport_csrf_token_default=ae211bb9b864e3710be99b4e9c0b7f83; sessionid=b1c1f1e289cdb6b0addc4ecfe1b05898; sessionid_ss=b1c1f1e289cdb6b0addc4ecfe1b05898; sid_guard=b1c1f1e289cdb6b0addc4ecfe1b05898%7C1618494439%7C5184000%7CMon%2C+14-Jun-2021+13%3A47%3A19+GMT; sid_tt=b1c1f1e289cdb6b0addc4ecfe1b05898; uid_tt=14f0450ee19f5df0a64347623155e3a9; uid_tt_ss=14f0450ee19f5df0a64347623155e3a9; install_id=3782738727152264; ttreq=1$ac2a701d366b9a541e7bb8dd37f37446d1911c91; odin_tt=2c23a69e0635259c6faf4fe5d0839e1b8f37b92aad6b805f022310f2295cce3c775707add160eee0aa132f5f446e471ca3b0e89cea2c1337fe6d55e212c6d3a6"})
+let hsbody = $.getdata('hsbody'{token=WJgckBpNAazbSvQnprUpfUtMylrBT58apbwMPmbbYND6WoscKu1HOcNMO1zMelgXfovaANu0_DAEWpma5t6ldQpaNyR0zO-2kdqsQBpfgVE%3D})
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 const invite=1;//新用户自动邀请，0关闭，1默认开启
 const logs =0;//0为关闭日志，1为开启
@@ -182,15 +179,15 @@ function GetCookie() {
 if($request&&$request.url.indexOf("task_done")>=0) {
    const hsurl = $request.url.split('?')[1]
    if(hsurl)     $.setdata(hsurl,`hsurl${status}`)
-   $.log(`[${zhiyi}] 获取hsurl请求: 成功,hsurl: ${hsurl}`)
+   $.log(`[${Ariszy}] 获取hsurl请求: 成功,hsurl: ${hsurl}`)
    $.msg(`hsurl${status}: 成功🎉`, ``)
    const hsheader = JSON.stringify($request.headers)+''
     if(hsheader)    $.setdata(hsheader,`hsheader${status}`)
-    $.log(`[${zhiyi}] 获取hsheader请求: 成功,hsheader: ${hsheader}`)
+    $.log(`[${Ariszy}] 获取hsheader请求: 成功,hsheader: ${hsheader}`)
     $.msg(`hsheader${status}: 成功🎉`, ``)
    const hsbody = $request.body
     if(hsbody)    $.setdata(hsbody,`hsbody${status}`)
-    $.log(`[${zhiyi}] 获取hsbody请求: 成功,hsbody: ${hsbody}`)
+    $.log(`[${Ariszy}] 获取hsbody请求: 成功,hsbody: ${hsbody}`)
     $.msg(`hsbody${status}: 成功🎉`, ``)
 }
 
@@ -198,16 +195,16 @@ if($request&&$request.url.indexOf("task_done")>=0) {
 if($request&&$request.url.indexOf("reaction/_play")>=0) {
    const playurl = $request.url
    if(playurl)     $.setdata(playurl,`playurl${status}`)
-   $.log(`[${zhiyi}] 获取playurl请求: 成功,playurl: ${playurl}`)
+   $.log(`[${Ariszy}] 获取playurl请求: 成功,playurl: ${playurl}`)
    $.msg(`playurl${status}: 成功🎉`, ``)
    const playheader =JSON.stringify($request.headers)+''
     if(playheader)    
 $.setdata(playheader,`playheader${status}`)
-    $.log(`[${zhiyi}] 获取playheader请求: 成功,playheader: ${playheader}`)
+    $.log(`[${Ariszy}] 获取playheader请求: 成功,playheader: ${playheader}`)
     $.msg(`playheader${status}: 成功🎉`, ``)
    const playbody = $request.body
     if(playbody)    $.setdata(playbody,`playbody${status}`)
-    $.log(`[${zhiyi}] 获取playbody请求: 成功,playbody: ${playbody}`)
+    $.log(`[${Ariszy}] 获取playbody请求: 成功,playbody: ${playbody}`)
     $.msg(`playbody${status}: 成功🎉`, ``)
 }
 }
@@ -692,7 +689,7 @@ if(tz==1){
    }else{
      $.log(message+note)
     //if ((hour == 12 && minute <= 20) || (hour == 23 && minute >= 40)) {
-       $.msg(zhiyi,'',message+note)
+       $.msg(Ariszy,'',message+note)
 //}
 }
    }else{
